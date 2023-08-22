@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => {
   return (
     <nav className="bg-gray-800">
-    <div className="flex justify-between items-center px-4 py-6" >
-     
-
-      <h1 className="text-white font-bold" >El Salvador</h1>
+    <div className="flex justify-between items-center px-4 py-6 ">
+    <img className="w-auto h-auto p-0 w-full aspect-video ..." src="/src/img/e.jpg"  />
+      <h1 className="text-white font-bold " >El Salvador</h1>
       <ul className="flex">
         <li >
             <Link to="/" className="text-white hover:text-gray-400 px-4 py-2">Inicio</Link>
