@@ -24,7 +24,7 @@ function CreatePages() {
     const onSubmit = async(data) => {
         try {
           
-            const response = await fetch('http://localhost:8000/apipatients', {
+            const response = await fetch('http://localhost:8000/api/patients', {
               method: 'POST',
               headers: {
                 'Content-type': 'application/json'
@@ -34,7 +34,7 @@ function CreatePages() {
 
             const patient = await response.json()
             console.log(patient)
-            navigate('/patiens')
+            navigate('/patients')
 
 
         } catch (error) {
@@ -84,7 +84,7 @@ function CreatePages() {
                         }
 
                         <textarea className='shadow appearance-none border rounded m-3 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                            {...register("address")}
+                            {...register("adress")}
                             cols="30" 
                             rows="10"
                             placeholder='Patient Address'

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar } from '../components/Navbar'
+import { get } from 'react-hook-form'
 
 const patientsPages = () => {
 
 const [data, setData] =useState()
 
 useEffect(()=> {
-  const getPatients  = async () =>{
+  const getAllPatients  = async () =>{
     try {
-      const response = await fetch('http://localhost:8000/api/patient')
-      const patient = response.json
+      const response = await fetch('http://127.0.0.1:8000/api/patients')
+      const patient =await response.json
       console.log(patient)
       //setData(patient)
       
@@ -17,6 +18,8 @@ useEffect(()=> {
       console.log("ESTO ES UN ERROR POR SI FALLA La API",error)
     }
   }
+
+  getAllPatients()
 
 },[])
 
